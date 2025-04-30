@@ -1,0 +1,64 @@
+html {scroll-behavior: smooth;}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F6F8FA; 
+    color: #1E3A8A; 
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto; 
+  }
+  
+  .site-header {
+    background-color: #032150;
+    height: 100px;
+    display: grid;
+    place-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar {
+    width: 100%;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .nav-menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-menu li a:hover,
+  .nav-menu li.active a {
+    background-color: #386bbc;
+  }
+  
+    .footer {
+        background-color: #032150;
+        color: white;
+        height: 100px;
+        display: grid;
+        place-items: center;
+        font-size: 1rem;
+      }
+
+      
