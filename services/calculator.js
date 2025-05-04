@@ -30,4 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     result.textContent = `Estimated Price: ₪${total.toLocaleString()}`;
   });
+
+  form.addEventListener("reset", function () {
+    result.textContent = "";
+  });
 });

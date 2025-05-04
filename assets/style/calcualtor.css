@@ -12,15 +12,16 @@
     width: 100%;
     max-height: 1200px;
     height:100%;
-    background-color: #ffffff;
+    background-color: var(--white-color); /* צבע לבן */
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    margin-top: 10px;
   }
   
   .intro-text {
     padding: 40px;
-    background-color: #EFF6FF; 
+    /* background-color: #EFF6FF;  */
     display: grid;
     gap: 20px; 
     align-content: center; 
@@ -34,22 +35,17 @@
     font-size: 1.1rem;
   }
 
-  @media (max-width: 767px) {
-    .intro-grid {
-      grid-template-columns: 1fr; 
-    }
-  }
-
   
   .intro-box {
-    background-color: #eaf0f8;
+    background-color:var(--white-color); /* צבע משני */
     padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    /* border: 1px solid var(--primary-color); צבע גבול */
+    /* border-radius: 12px; */
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); */
   }
   
   .intro-box h2 {
-    color: #043584;
+    color: var(--primary-color); /* צבע טקסט */
     margin-bottom: 20px;
   }
   
@@ -57,27 +53,45 @@
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+    border-radius: 12px;
+    border: 1px solid var(--primary-color); /* צבע גבול */
+    background-color: var(--white-color); 
+    color: var(--primary-color); 
+    
   }
   
+
+  
   button {
-    background-color: #043584;
+    background-color: var(--primary-color); /* צבע ראשי */
     color: white;
     padding: 10px 20px;
     border-radius: 8px;
     border: none;
     cursor: pointer;
+    margin-top: 10px;
   }
   
+  button + button {
+    margin-left: 10px;
+  }
+
   #priceResult {
     margin-top: 40px;
     font-weight: bold;
-    color: #043584;
-    padding: 40px;
-    background-color: #EFF6FF; 
+    width: 50;
+    color: var(--primary-color); /* צבע טקסט */
+    font-size: 1.5rem;
+    padding: 20px;
     display: grid;
     gap: 20px; 
     align-content: center; 
+    text-align: center;
   }
   
+  @media (max-width: 767px) {
+    .intro-grid {
+      grid-template-columns: 1fr; 
+    }
+  }
+

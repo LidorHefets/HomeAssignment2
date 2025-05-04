@@ -21,7 +21,6 @@
   
   .intro-text {
     padding: 40px;
-    background-color: #EFF6FF; 
     display: grid;
     gap: 20px; 
     align-content: center; 
@@ -35,9 +34,8 @@
     font-size: 1.1rem;
   }
   
-  /* כפתור הורדת קובץ */
   .btn {
-    background-color: #1E3A8A;
+    background-color: var(--primary-color); /* צבע ראשי */
     color: white;
     padding: 10px 20px;
     border-radius: 8px;
@@ -48,7 +46,7 @@
   }
   
   .btn:hover {
-    background-color: #032150;
+    background-color: var(--primary-color-hover); /* צבע ראשי בהעברה */
   }
   
   .intro-image img {

@@ -1,23 +1,40 @@
 html {scroll-behavior: smooth;}
 
+:root {
+  --primary-color: #1E3A8A; /* צבע ראשי */
+  --secondary-color: #F6F8FA; /* צבע משני */
+  --bold-color: #386bbc; /* צבע דגש */
+  --text-color: #333; /* צבע טקסט */
+  --nav-color:#032150; /* צבע רקע */
+  --footer-color: #032150; /* צבע רגל */
+ --white-color: #ffffff; /* צבע לבן */
+ --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* משפחת גופנים */
+--dark-background: #121212; /* צבע רקע כהה */
+--dark-text-color: #e0e0e0; /* צבע טקסט כהה */
+--dark-secondary-background: #737373; /* צבע משני כהה */
+
+
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
+
   
   body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #F6F8FA; 
-    color: #1E3A8A; 
+    font-family: var(--font-family);
+    background-color: var(--secondary-color); /* צבע משני */
+    color: var(--primary-color);
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto; 
   }
   
   .site-header {
-    background-color: #032150;
+    background-color:var(--nav-color) ;/* צבע רקע */
     height: 100px;
+    color: var(--secondary-color); /* צבע טקסט */
     display: grid;
     place-items: center;
     position: sticky;
@@ -40,25 +57,107 @@ html {scroll-behavior: smooth;}
   
   .nav-menu li a {
     text-decoration: none;
-    color: white;
+    color: var(--secondary-color); /* צבע טקסט */
     font-size: 1.2rem;
     padding: 10px 20px;
     border-radius: 8px;
     transition: background-color 0.3s;
   }
+  .socail-icons {
+    display: flex;
+    gap: 20px;
+  }
   
   .nav-menu li a:hover,
   .nav-menu li.active a {
-    background-color: #386bbc;
+    background-color: var(--bold-color); /* צבע דגש */
   }
   
     .footer {
-        background-color: #032150;
-        color: white;
+        background-color: var(--nav-color);
+        color: var(--secondary-color); /* צבע טקסט */
         height: 100px;
         display: grid;
         place-items: center;
         font-size: 1rem;
       }
 
+
+
+
+/* עיצוב כפתור dark mode */
+#darkModeToggle {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 20px;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+#darkModeToggle:hover {
+  transform: scale(1.2);
+}
+
+/* מצב כהה עבור כל העמוד */
+body.dark-mode {
+  background-color:var(--dark-secondary-background);
+  color: var(--dark-text-color);
+}
+
+body.dark-mode .intro-text,
+body.dark-mode .intro-box,
+body.dark-mode .about-section,
+body.dark-mode .form,
+body.dark-mode .skill-category,
+body.dark-mode .intro-box, 
+body.dark-mode .footer, 
+body.dark-mode .navbar,
+body.dark-mode .site-header
+{
+  background-color: var(--dark-background) !important;
+  color: var(--dark-text-color) !important;
+}
+body.dark-mode .social-icons  {
+  background-color: var(--dark-secondary-background) !important;
+  border-radius: 12px !important;
+  padding: 10px;
+  max-width: 320px;
+}
+
+body.dark-mode .nav-menu li a {
+  color: var(--dark-text-color);
+}
+body.dark-mode .intro-box h2 {
+  color: var(--dark-text-color);
+}
+body.dark-mode .skill-category{
+  border: 2px solid var(--dark-secondary-background);
+  
+}
+body.dark-mode .skills-title{
+  color: var(--dark-text-color);
+}
+
+body.dark-mode .btn {
+  background-color: var(--dark-secondary-background);
+}
+body.dark-mode .btn:hover {
+  background-color: var(--dark-text-color);
+  color: var(--dark-secondary-background);
+}
+
+body.dark-mode #priceResult {
+  background-color: var(--dark-secondary-background);
+  color: var(--dark-text-color);
+  border-radius: 12px !important;
+}
+body.dark-mode input,select {
+  /* background-color: var(--dark-secondary-background);
+  color: var(--dark-text-color); */
+  border: 1px solid var(--dark-text-color) !important;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
       

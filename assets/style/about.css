@@ -1,65 +1,133 @@
 
+*{
+  box-sizing: border-box; 
+}
+
+body {
+  background-color: var(--secondary-color); /* צבע משני */
+  display: grid;
+  grid-template-rows: auto 1fr auto; 
+  min-height: 100vh;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.about-section {
+  width: 100%;
+  max-height: 800px;
+  background-color: var(--white-color); /* צבע לבן */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  overflow-wrap: break-word; /* במקרה של מילים ארוכות מאוד */
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+  gap: 10px;
+  align-items: center;
+}
+
+.section-image img {
+  width: 100%;
+  height: 80%;
+  max-height: 400px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.section-title h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 1px;
+}
+
+.section-text p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  padding: 0 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.section-text {
+  padding: 0 10px;
+  max-width: 110%;
+}
 
 
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f6f8fa; 
-    color: #032150;; 
-    display: grid;
-    grid-template-rows: auto 1fr auto; 
-    min-height: 100vh;
-  }
-
-  .main-content {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    padding: 40px 20px;
-  }
-  
-  .about-section {
-    width: 100%;
-    max-height: 600px;
-    background-color: #eaf0f7;
-    padding: 30px 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  }
-  
+/* מובייל - מסכים עד 767px */
+@media (max-width: 767px) {
   .section-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    gap: 20px;
-    align-items: center;
+    grid-template-columns: 1fr;
+    text-align: center;
   }
-  
+
+  .section-title h2 {
+    font-size: 1.6rem;
+    margin-top: 3px;
+  }
+
+  .section-text p {
+    font-size: 0.90rem;
+  }
+
   .section-image img {
-    width: 100%;
-    height: 400px;
-    border-radius: 12px;
-    object-fit: cover;
+    height: 50%;
   }
   
+}
+
+/* טאבלט - 768px עד 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  .section-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section-title h2 {
+    font-size: 2.4rem;
+  }
+
+  .section-text p {
+    font-size: 1.15rem;
+  }
+}
+
+/* מחשב נייד - 992px עד 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .section-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .section-title h2 {
+    font-size: 2.6rem;
+  }
+
+  .section-text p {
+    font-size: 1.2rem;
+  }
+}
+
+/* מחשב שולחני ומעלה - 1200px ומעלה */
+@media (min-width: 1200px) {
+  .section-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   .section-title h2 {
     font-size: 3rem;
-    text-align: center;
-    color: #032150;
   }
-  
+
   .section-text p {
     font-size: 1.3rem;
-    line-height: 1.7rem;
-    color: #333;
   }
-  
-  @media (max-width: 767px) {
-    .section-grid {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
-  
-    .section-title h2 {
-      margin-top: 20px;
-    }
-  }
-  
+}
