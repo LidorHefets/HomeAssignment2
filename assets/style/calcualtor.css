@@ -13,7 +13,7 @@
     max-height: 1200px;
     height:100%;
     background-color: var(--white-color); /* צבע לבן */
-    border-radius: 12px;
+    border-radius: var(--border-curve); /* עיגול פינות */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     margin-top: 10px;
@@ -21,7 +21,7 @@
   
   .intro-text {
     padding: 40px;
-    /* background-color: #EFF6FF;  */
+
     display: grid;
     gap: 20px; 
     align-content: center; 
@@ -37,15 +37,13 @@
 
   
   .intro-box {
-    background-color:var(--white-color); /* צבע משני */
+    background-color:var(--white-color); 
     padding: 30px;
-    /* border: 1px solid var(--primary-color); צבע גבול */
-    /* border-radius: 12px; */
-    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); */
+   
   }
   
   .intro-box h2 {
-    color: var(--primary-color); /* צבע טקסט */
+    color: var(--primary-color); 
     margin-bottom: 20px;
   }
   
@@ -53,8 +51,8 @@
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border-radius: 12px;
-    border: 1px solid var(--primary-color); /* צבע גבול */
+    border-radius: var(--border-curve);
+    border: 1px solid var(--primary-color); 
     background-color: var(--white-color); 
     color: var(--primary-color); 
     
@@ -63,7 +61,7 @@
 
   
   button {
-    background-color: var(--primary-color); /* צבע ראשי */
+    background-color: var(--primary-color); 
     color: white;
     padding: 10px 20px;
     border-radius: 8px;
@@ -93,5 +91,13 @@
     .intro-grid {
       grid-template-columns: 1fr; 
     }
+    #PC{
+      font-size: 0.5rem;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      width: auto;
+
+    }
+  
   }
 

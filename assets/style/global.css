@@ -12,6 +12,8 @@ html {scroll-behavior: smooth;}
 --dark-background: #121212; /* צבע רקע כהה */
 --dark-text-color: #e0e0e0; /* צבע טקסט כהה */
 --dark-secondary-background: #737373; /* צבע משני כהה */
+--border-curve: 12px; /* רדיוס פינות */
+--border-light-curve: 8px; /* רדיוס פינות ימניות */
 
 
 }
@@ -60,9 +62,12 @@ html {scroll-behavior: smooth;}
     color: var(--secondary-color); /* צבע טקסט */
     font-size: 1.2rem;
     padding: 10px 20px;
-    border-radius: 8px;
+    border-radius: var(--border-light-curve);
     transition: background-color 0.3s;
   }
+  /* #PC{
+    display: none;
+  } */
   .socail-icons {
     display: flex;
     gap: 20px;
@@ -83,9 +88,6 @@ html {scroll-behavior: smooth;}
       }
 
 
-
-
-/* עיצוב כפתור dark mode */
 #darkModeToggle {
   background: transparent;
   border: none;
@@ -93,7 +95,7 @@ html {scroll-behavior: smooth;}
   cursor: pointer;
   margin-left: auto;
   margin-right: 20px;
-  color: #ffffff;
+  color: var(--white-color);
   transition: transform 0.3s ease;
 }
 
@@ -155,9 +157,13 @@ body.dark-mode #priceResult {
   border-radius: 12px !important;
 }
 body.dark-mode input,select {
-  /* background-color: var(--dark-secondary-background);
-  color: var(--dark-text-color); */
+
   border: 1px solid var(--dark-text-color) !important;
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
       
+
+body.dark-mode .nav-menu li a:hover,
+body.dark-mode .nav-menu li.active a {
+  background-color: var(--dark-secondary-background);
+}
