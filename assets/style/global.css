@@ -88,6 +88,41 @@ html {scroll-behavior: smooth;}
       }
 
 
+      .hamburger {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: var(--secondary-color);
+        cursor: pointer;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        z-index: 1100;
+      }
+      
+      @media (max-width: 768px) {
+        .hamburger {
+          display: block;
+        }
+      
+        .nav-menu {
+          display: none;
+          flex-direction: column;
+          gap: 20px;
+          position: absolute;
+          top: 100px;
+          right: 20px;
+          background-color: var(--nav-color);
+          padding: 20px;
+          border-radius: 12px;
+        }
+      
+        .nav-menu.show {
+          display: flex;
+        }
+      }
+
 #darkModeToggle {
   background: transparent;
   border: none;
@@ -117,7 +152,9 @@ body.dark-mode .skill-category,
 body.dark-mode .intro-box, 
 body.dark-mode .footer, 
 body.dark-mode .navbar,
+body.dark-mode .hamburger,
 body.dark-mode .site-header
+
 {
   background-color: var(--dark-background) !important;
   color: var(--dark-text-color) !important;
@@ -166,4 +203,9 @@ body.dark-mode input,select {
 body.dark-mode .nav-menu li a:hover,
 body.dark-mode .nav-menu li.active a {
   background-color: var(--dark-secondary-background);
+}
+
+body.dark-mode .nav-menu  {
+  background-color: var(--dark-background) !important;
+  color: var(--dark-text-color) !important;
 }
