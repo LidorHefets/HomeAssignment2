@@ -209,3 +209,56 @@ body.dark-mode .nav-menu  {
   background-color: var(--dark-background) !important;
   color: var(--dark-text-color) !important;
 }
+
+
+
+@media (max-width: 480px) {
+  .nav-menu {
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: 100px;
+    padding: 15px;
+    border-radius: 0;
+    gap: 16px;
+  }
+
+  .nav-menu li a {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+
+  .hamburger {
+    top: 25px;
+    right: 20px;
+    font-size: 1.8rem;
+  }
+
+  #darkModeToggle {
+    margin-right: 10px;
+    font-size: 1.3rem;
+  }
+
+
+  .social-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .social-icons a img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 10px 14px;
+  }
+
+  .footer {
+     
+    place-items: center;
+    font-size: 0.7rem;
+  }
+}
