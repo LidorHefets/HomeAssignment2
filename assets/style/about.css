@@ -4,10 +4,11 @@
 }
 
 body {
-  background-color: var(--secondary-color); /* צבע משני */
+  background-color: var(--secondary-color); 
   display: grid;
   grid-template-rows: auto 1fr auto; 
   min-height: 100vh;
+
 }
 
 .main-content {
@@ -20,13 +21,13 @@ body {
 .about-section {
   width: 100%;
   max-height: 800px;
-  background-color: var(--white-color); /* צבע לבן */
+  background-color: var(--white-color); 
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   max-width: 1200px;
   margin: 0 auto;
   padding: 30px 20px;
-  overflow-wrap: break-word; /* במקרה של מילים ארוכות מאוד */
+  overflow-wrap: break-word; 
 }
 
 .section-grid {
@@ -65,7 +66,64 @@ body {
 }
 
 
-/* מובייל - מסכים עד 767px */
+@media (max-width: 300px) {
+  .about-section {
+    padding: 15px 10px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  .section-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    text-align: center;
+    padding: 0;
+  }
+
+  .section-title h2 {
+    font-size: 1.1rem;
+    word-break: break-word;
+    margin: 0;
+  }
+
+  .section-text {
+    padding: 0 5px;
+    max-width: 100%;
+  }
+
+  .section-text p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .section-image img {
+    height: 50%;
+  }
+}
+
+@media (min-width: 480px) {
+
+  .section-grid {
+    grid-template-columns: 1fr; 
+    text-align: center;
+    height: auto;
+  }
+
+  .section-title h2 {
+    font-size: 1.5rem;
+  }
+
+  .section-text p {
+    font-size: 1rem;
+  }
+
+  .section-image img {
+    height: 50%;
+  }
+}
+
 @media (max-width: 767px) {
   .section-grid {
     grid-template-columns: 1fr;
@@ -87,7 +145,6 @@ body {
   
 }
 
-/* טאבלט - 768px עד 991px */
 @media (min-width: 768px) and (max-width: 991px) {
   .section-grid {
     grid-template-columns: 1fr 1fr 1fr ;
@@ -102,7 +159,6 @@ body {
   }
 }
 
-/* מחשב נייד - 992px עד 1199px */
 @media (min-width: 992px) and (max-width: 1199px) {
   .section-grid {
     grid-template-columns: 1fr 1fr 1fr;
@@ -117,7 +173,6 @@ body {
   }
 }
 
-/* מחשב שולחני ומעלה - 1200px ומעלה */
 @media (min-width: 1200px) {
   .section-grid {
     grid-template-columns: 1fr 1fr 1fr;

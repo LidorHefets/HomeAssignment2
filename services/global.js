@@ -36,4 +36,22 @@
   });
   });
 
+  const input = document.getElementById('skillSearch');
+  const tables = document.querySelectorAll('.category-table');
+
+  input.addEventListener('keyup', function () {
+    const filter = input.value.toLowerCase();
+    tables.forEach(box => {
+      const rows = box.querySelectorAll('tbody tr');
+      let hasVisible = false;
+      rows.forEach(row => {
+        const text = row.textContent.toLowerCase();
+        const match = text.includes(filter);
+        row.style.display = match ? '' : 'none';
+        if (match) hasVisible = true;
+      });
+      box.style.display = hasVisible ? '' : 'none';
+    });
+  });
+
  
