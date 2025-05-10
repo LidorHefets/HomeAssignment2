@@ -90,7 +90,7 @@ body {
 /* טאבלט - 768px עד 991px */
 @media (min-width: 768px) and (max-width: 991px) {
   .section-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
   }
 
   .section-title h2 {
